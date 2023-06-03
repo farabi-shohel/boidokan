@@ -1,0 +1,63 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.7" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.6" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.6" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.6" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.6" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.6">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.6" />
+      <PackageReference Include="Stripe.net" Version="39.124.0" />
+      <PackageReference Include="toastr" Version="2.1.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\boiDokan.dal\boiDokan.dal.csproj" />
+      <ProjectReference Include="..\boiDokan.entities\boiDokan.entities.csproj" />
+      <ProjectReference Include="..\boiDokan.utility\boiDokan.utility.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Areas\Admin\Data" />
+      <Folder Include="Areas\Admin\Models" />
+      <Folder Include="Areas\Customer\Data" />
+      <Folder Include="Areas\Customer\Models" />
+      <Folder Include="wwwroot\images\products" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Category\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Category\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Category\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Category\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Home\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Home\Privacy.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Areas\Admin\Views\Category\Create.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Category\Delete.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Category\Edit.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Category\Index.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Company\Delete.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Company\Index.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Company\UpSert.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\CoverType\Create.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\CoverType\Delete.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\CoverType\Edit.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\CoverType\Index.cshtml" />
+      <AdditionalFiles Include="Areas\Customer\Views\Home\Index.cshtml" />
+      <AdditionalFiles Include="Areas\Customer\Views\Home\Privacy.cshtml" />
+    </ItemGroup>
+
+</Project>
